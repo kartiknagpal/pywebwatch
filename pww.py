@@ -5,6 +5,7 @@ from httplib2 import Http
 from datetime import datetime
 
 from logger import lgr
+from chkbckend import check_backend
 
 
 def is_ok_backend(html_content):
@@ -16,7 +17,7 @@ def is_ok_backend(html_content):
 	'''
 	is_ok_backend = True
 	try:
-		is_ok_backend =  not (len(html_content.find_all(id='featuredthemes')[0].contents) == 0)
+		is_ok_backend =  check_backend(html_content)
 		return is_ok_backend
 	except:
 		alert(1)
