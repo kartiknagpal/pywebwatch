@@ -3,15 +3,15 @@
 Inspired by the need to look over running status of a website indefinetly, instead relying on cumbersome and hopeless manual techniques.<br/>
 
 This command-line utility runs indefinetly in the background polling server url at regular intervals* to check whether frontend* or backend* are down, when fault found:<br> 
-it alerts by showing warning dialog using tcl/tk gui interface.<br/>
-it logs the fault in Webwatch.log file<br/>
+1. Alerts by showing warning dialog using tcl/tk gui interface.<br/>
+2. Logs the fault in Webwatch.log file<br/>
 Note: * are configurable
 <br/>
 
-##Dependencies(First ensure following python packages are installed and are in python path):<br/>
-    BeautifulSoup4<br/>
-    httplib2<br/>
-    tcl/tk<br/>
+###Dependencies(First ensure following python packages are installed and are in python path):<br/>
+    * BeautifulSoup4<br/>
+    * httplib2<br/>
+    * tcl/tk<br/>
 
 ##How to set up for use:
 1). Second edit config.py as follows:<br/>
