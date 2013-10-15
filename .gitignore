@@ -1,0 +1,7 @@
+.cache/
+__pycache__/
+*.html
+*.log
+*.out
+test2_files/
+test_files/
