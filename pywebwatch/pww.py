@@ -1,8 +1,7 @@
-from tkinter import Tk, messagebox
+from dependencies.tkinter import Tk, messagebox
+from dependencies.bs4 import BeautifulSoup
+from dependencies.httplib2 import Http
 from time import sleep
-from bs4 import BeautifulSoup
-from httplib2 import Http
-from datetime import datetime
 
 from logger import lgr
 from chkbckend import check_backend
@@ -85,6 +84,7 @@ def main(url_to_check, time_interval, time_interval_on_failure):
 	      time_interval_on_failure -> this many seconds between next check when failure is detected
 
 	'''
+	lgr.info('pywebwatch started.')
 	while True:
 		is_all_good = True
 		html_content, is_ok_frontend = grab_from_web(url_to_check)
@@ -102,8 +102,3 @@ def main(url_to_check, time_interval, time_interval_on_failure):
 		if is_all_good:
 			lgr.info('All is Well ')
 		sleep(time_interval)
-
-
-if __name__ == '__main__':
-	from config import url_to_check, time_interval, time_interval_on_failure
-	main(url_to_check, time_interval, time_interval_on_failure)
