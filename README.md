@@ -22,7 +22,7 @@ time_interval = 45 	        # after these many seconds recheck
 time_interval_on_failure = 180  # after these many seconds do subsequent rechecks, when a fault is found
 ```
 <br/>
-2). execute program: $ python pywebsearch.zip<br/>
+2). execute program: $ python pywebwatch.zip<br/>
 
 Note: i wrote this program to monitor a website that has frontend and backend decoupled, running on seperate servers. So if you want to monitor site
 backed by single server only, it will work just fine treating the only server as frontend server.<br/>
